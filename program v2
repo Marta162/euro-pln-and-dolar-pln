@@ -1,0 +1,29 @@
+print('Witaj, ten program przeliczy EURO na ZŁOTÓWKI i na odwrót :) \n')
+print('Kurs Euro do złotóek to 4,26\n')
+pln=float(input('Podaj kwotę w złotówkach\n'))
+euro=float(input('Podaj kwotę w euro\n'))
+
+kurs=float(4.26)
+def plneuro(pln,kurs):
+  return pln/kurs
+
+def europln(euro,kurs):
+  return euro*kurs
+print('{} złotówek to: {:.2f} euro'.format(pln, plneuro(pln,kurs)))
+print('{} euro to :{:.2f} złotych'.format(euro,europln(euro,kurs)))
+
+print('Czy chciałbyś zrobić to samo z dolarem?? T/N')
+choice=input()
+
+if choice=='T' or choice=='t':
+  pln2=float(input('Podaj kwotę w złotówkach\n'))
+  dolar=float(input('Podaj kwotę w dolarach\n'))
+  kurs2=float(3.89)
+  def plndolar(pln2,kurs2):
+    return pln2/kurs2
+  def dolarpln(dolar,kurs2):
+    return dolar*kurs2
+  print('{} złotówek to: {:.2f} dolarów'.format(pln2, plndolar(pln2,kurs2)))
+  print('{} dolarów to :{:.2f} złotych'.format(dolar,dolarpln(dolar,kurs2)))
+else:
+  print('NIE TO NIE')
